@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ColorIo</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
+    <script src="./script/script.js"></script>
+  </head>
+  <body onload="onPageLoad()">
+    <nav class="nav">
+      <ul>
+        <li>Colors I0</li>
+      </ul>
+    </nav>
+
+    <div class="colorPaletContainer">
+      <span class="reload" onclick="colorGenerator()">&#x21bb;</span>
+      <div class="colorSlice" onclick="copy(0)"></div>
+      <div class="colorSlice" onclick="copy(1)"></div>
+      <div class="colorSlice" onclick="copy()"></div>
+      <div class="colorSlice" onclick="copy()"></div>
+      <div class="colorSlice" onclick="copy()"></div>
+      <div class="colorSlice" onclick="copy()"></div>
+      <div class="colorSlice" onclick="copy()"></div>
+      <div class="colorSlice" onclick="copy()"></div>
+      <div class="colorSlice" onclick="copy()"></div>
+      <div class="colorSlice" onclick="copy()"></div>
+      <div class="colorSlice" onclick="copy()"></div>
+      <div class="colorSlice" onclick="copy()"></div>
+      <div class="colorSlice" onclick="copy()"></div>
+      <div class="colorSlice" onclick="copy()"></div>
+      <div class="colorSlice" onclick="copy()"></div>
+      <div class="colorSlice" onclick="copy()"></div>
+      <div class="colorSlice" onclick="copy()"></div>
+      <div class="colorSlice" onclick="copy()"></div>
+      <div class="colorSlice" onclick="copy()"></div>
+      <div class="colorSlice" onclick="copy()"></div>
+    </div>
+
+    <div class="colorPickerContainer">
+      <div class="controlsPanel">
+        <div>
+          <input type="color" id="colorSelector" oninput="colorPicked()" />
+        </div>
+        <div class="rangeBar">
+          <input
+            type="range"
+            id="red"
+            min="0"
+            max="255"
+            value="10"
+            oninput="rangeValue('red')"
+          />
+          <input
+            type="range"
+            id="green"
+            min="0"
+            max="255"
+            value="10"
+            oninput="rangeValue('green')"
+          />
+          <input
+            type="range"
+            id="blue"
+            min="0"
+            max="255"
+            value="20"
+            oninput="rangeValue('blue')"
+          />
+        </div>
+      </div>
+      <div class="displayPanel" onclick="copy()">colorCode</div>
+    </div>
+
+    <div class="colorConvertorContainer">
+      <div class="inputPanel">
+        <input
+          type="input"
+          id="hexinput"
+          placeholder="Hex to RGB Conversion"
+          oninput="colorPicked()"
+        />
+        <span>Valuee </span>
+      </div>
+      <div class="inputPanel">
+        <input
+          type="input"
+          id="rgbinput"
+          placeholder="RGB to HEX Conversion"
+          oninput="colorPicked()"
+        />
+        <span>Valuee</span>
+      </div>
+    </div>
+  </body>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/toastify-js"
+  ></script>
+</html>
