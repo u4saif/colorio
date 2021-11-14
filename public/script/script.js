@@ -94,3 +94,21 @@ function colorPicked() {
   displayPanel1[0].style.backgroundColor = colorSelector.value;
   displayPanel1[0].innerHTML = colorSelector.value;
 }
+
+function convertHexToRGB(value) {
+  let element = document.getElementById(value);
+  if (element.value.length == 6) {
+    let hexToRgbValue = this.convertHexToRGBA(element.value);
+    document.getElementById('copyClipIcon').style.display='inline';
+    document.getElementById('hexinputSpan').innerHTML = hexToRgbValue;
+    document.getElementById('hexinputDiv').style.backgroundColor = hexToRgbValue;
+     
+  }
+}
+
+function copyWithJs(id){
+  const cb = navigator.clipboard;
+  const value = document.getElementById(id);
+  cb.writeText(value.innerText).then(() => copy());
+
+}
