@@ -49,14 +49,7 @@ function copy() {
   }).showToast();
 
 }
-function componentToHex(c) {
-  var hex = c.toString(32);
-  return hex.length == 1 ? "0" + hex : hex;
-}
 
-function rgbToHex2(r, g, b) {
-  return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
-}
 function rgbTohex(r, g, b) {
   return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 }
@@ -111,4 +104,18 @@ function copyWithJs(id){
   const value = document.getElementById(id);
   cb.writeText(value.innerText).then(() => copy());
 
+}
+
+function rgbColor() {
+  let R= (0<=parseInt(document.getElementById('Rinput').value)<256) ? parseInt(document.getElementById('Rinput').value) : 0;
+  let G=(0<=parseInt(document.getElementById('Ginput').value)<=255) ? parseInt(document.getElementById('Ginput').value) : 0;
+  let B=(0<=parseInt(document.getElementById('Binput').value)<=255) ? parseInt(document.getElementById('Binput').value) : 0;
+  R=(0<=R && R<256) ? R : 0;
+  G=(0<=G && G<256) ? G : 0;
+  B=(0<=B && B<256) ? B : 0;
+  let convertedvalue=rgbTohex(R,G,B);
+  document.getElementById('rgbInputSpan').innerHTML = convertedvalue;
+  document.getElementById('rgbInputDiv').style.backgroundColor = convertedvalue;
+  document.getElementById('copyClipIcon2').style.display='inline';
+  
 }

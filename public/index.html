@@ -98,7 +98,6 @@
           <label>Converted Hex eqals to:- </label>
           <label id="hexinputSpan"></label>
           <div id="hexinputDiv" onclick="copyWithJs('hexinputSpan')">
-            <span class="HexCode"> </span>
             <span
               style="
                 font-size: 0.875em;
@@ -118,41 +117,65 @@
         </div>
       </div>
     </div>
+    <div class="inputPanelContainer">
+      <div class="inputChildRGB">
+        <div class="rgbItem">
+          <label for="hexinput" id="rlabel"> R </label
+          ><input
+            type="input"
+            id="Rinput"
+            maxlength="3"
+            placeholder="0-255"
+            oninput="rgbColor()"
+          />
+        </div>
 
-    <div class="inputPanel">
-      <p style="text-align: center">Enter rgb value</p>
-      <div class="rgbItem">
-        <label for="hexinput" id="rlabel"> R </label
-        ><input
-          type="input"
-          id="hexinput"
-          placeholder="#Hex to RGB Conversion"
-          oninput="colorPicked()"
-        />
-      </div>
+        <div class="rgbItem">
+          <label for="hexinput" id="glabel"> G </label>
+          <input
+            type="input"
+            id="Ginput"
+            maxlength="3"
+            placeholder="0-255"
+            placeholder="#Hex to RGB Conversion"
+            oninput="rgbColor()"
+          />
+        </div>
 
-      <div class="rgbItem">
-        <label for="hexinput" id="glabel"> G </label>
-        <input
-          type="input"
-          id="hexinput"
-          placeholder="#Hex to RGB Conversion"
-          oninput="colorPicked()"
-        />
+        <div class="rgbItem">
+          <label for="hexinput" id="blabel"> B </label>
+          <input
+            type="input"
+            id="Binput"
+            maxlength="3"
+            placeholder="0-255"
+            placeholder="#Hex to RGB Conversion"
+            oninput="rgbColor()"
+          />
+        </div>
+        <div class="rgbResultItem">
+          <label>Converted rgb eqals to Hex:- </label>
+          <label id="rgbInputSpan"></label>
+          </div>
+          <div id="rgbInputDiv" onclick="copyWithJs('rgbInputSpan')">
+            <span
+            style="
+              font-size: 0.875em;
+              margin-right: 0.125em;
+              position: relative;
+              top: -0.25em;
+              left: -0.125em;
+              display: none;
+            "
+            id="copyClipIcon2"
+          >
+            📄<span style="position: absolute; top: 0.25em; left: 0.25em"
+              >📄</span
+            >
+          </span>
+        </div>
+        </div>
       </div>
-
-      <div class="rgbItem">
-        <label for="hexinput" id="blabel"> B </label>
-        <input
-          type="input"
-          id="hexinput"
-          placeholder="#Hex to RGB Conversion"
-          oninput="colorPicked()"
-        />
-      </div>
-    </div>
-    <div>
-      <span>Converted rgb eqals to Hex# </span>
     </div>
   </body>
   <script

@@ -193,6 +193,7 @@
   border-radius: 50%;
 }
 .rgbItem {
+  grid-column: 1/1;
   padding: 5px;
   margin: 5px;
 }
@@ -221,4 +222,31 @@
 .item {
   text-align: center;
   font-size: 14px;
+}
+
+.inputChildRGB {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.rgbResultItem {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+#rgbInputDiv {
+  width: 100%;
+  height: 100%;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.rgbItem > input {
+  width: 3pc;
 }
