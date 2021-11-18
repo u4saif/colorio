@@ -115,7 +115,7 @@ function rgbColor() {
   B=(0<=B && B<256) ? B : 0;
   let convertedvalue=rgbTohex(R,G,B);
   document.getElementById('rgbInputSpan').innerHTML = convertedvalue;
-  document.getElementById('rgbInputDiv').style.backgroundColor = convertedvalue;
+  document.getElementById('rgbInputDivChild').style.backgroundColor = convertedvalue;
   document.getElementById('copyClipIcon2').style.display='inline';
   
 }
